@@ -1,19 +1,10 @@
 $(document).ready(function() {
-document.createElement('header');
-document.createElement('nav');
-document.createElement('section');
-document.createElement('article');
-document.createElement('aside');
-document.createElement('footer');
-document.createElement('figure');
-document.createElement('figcaption');
-document.createElement('main');
-    
+   
     
     	// анимация сэндвича
-	$("#sandwich, .menu_item").click(function () {
-		$("#sandwich").toggleClass("active");
-		$("header nav").slideToggle(300);
+	$("#sandwich").click(function () {
+		/*$("#sandwich").toggleClass("active");*/
+		$(".accordion").slideToggle(200);
 	});
 	
 	// слайдер
@@ -35,18 +26,6 @@ document.createElement('main');
 		]
 	});
 	
-	// тень от меню при прокрутке страницы больше чем 22px
-	$(window).scroll(function () {
-	  if ($(this).scrollTop() > 22) {
-		// бла-бла-бла
-			$('.main-menu').addClass('shadow');
-	  } else {
-		$('.main-menu').removeClass('shadow');
-	  }
-	});
-	
-	// анимация
-	new WOW().init();
-	
+
 	
 });
