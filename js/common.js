@@ -1,31 +1,49 @@
 $(document).ready(function() {
    
     
-    	// анимация сэндвича
+    	// сэндвич меню
 	$("#sandwich").click(function () {
 		/*$("#sandwich").toggleClass("active");*/
 		$(".accordion").slideToggle(200);
 	});
 	
 	// слайдер
-	$('.main-slider').slick({
+	$('.manufacturers-carousel').slick({
 		infinite: true,
-		dots: true,
-		fade: true,
-		arrows: false,
-		pauseOnFocus: false,
-		speed: 1000,
-		autoplay: true,
-		responsive: [
-			{
-			  breakpoint: 768,
-			  settings: {
-				fade: false
-			  }
-			}
-		]
+		dots: false,
+		fade: false,
+		arrows: true,
+		pauseOnFocus: true,
+		speed: 500,
+		autoplaySpeed: 6000,
+		autoplay: true
 	});
 	
+	// кнопка вверх
+	$(function () {
+		$.fn.scrollToTop = function () {
+			$(this).hide().removeAttr("href");
+			if ($(window).scrollTop() != "0") {
+				$(this).fadeIn("slow")
+			}
+			var scrollDiv = $(this);
+			$(window).scroll(function () {
+				if ($(window).scrollTop() == "0") {
+					$(scrollDiv).fadeOut("slow")
+				} else {
+					$(scrollDiv).fadeIn("slow")
+				}
+			});
+			$(this).click(function () {
+				$("html, body").animate({
+					scrollTop: 0
+				}, "slow")
+			})
+		}
+	});
+	$(function () {
+		$("#toTop").scrollToTop();
+	});
 
 	
 });
