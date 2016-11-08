@@ -64,7 +64,9 @@ body {
   font: 15px MyriadPro, Arial, Geneva, Helvetica;
   -webkit-text-size-adjust: none;
   padding-top: 39px;
-  background-color: #c9c9c9; }
+  background-color: #0f0f0f;
+  display: table;
+  width: 100%; }
 
 p {
   margin: 0; }
@@ -169,7 +171,8 @@ footer {
 .wrap-big {
   width: 360px;
   margin: 0 auto;
-  position: relative; }
+  position: relative;
+  background-color: #c9c9c9; }
 
 .wrapper {
   width: 325px;
@@ -185,6 +188,8 @@ footer {
   background-color: #494949;
   height: 39px;
   color: #fff; }
+  .top .wrap-big {
+    background: none; }
   .top a {
     color: #fff; }
   .top .wrap-big {
@@ -260,7 +265,8 @@ footer {
   background-color: #494949;
   height: 37px; }
   .subheader .wrap-big {
-    padding: 3px 0 0 20px; }
+    padding: 3px 0 0 20px;
+    background: none; }
   .subheader .search {
     width: 255px;
     height: 31px;
@@ -421,7 +427,8 @@ footer {
 .manufacturers-index {
   background-color: #646464; }
   .manufacturers-index .wrap-big {
-    padding-bottom: 23px; }
+    padding-bottom: 23px;
+    background: none; }
   .manufacturers-index h3 {
     font: 22px/52px MyriadPro, Arial, Geneva, Helvetica;
     margin: 0;
@@ -533,8 +540,7 @@ footer {
 
 .cards {
   background-color: #fff;
-  padding-top: 20px;
-  margin-bottom: 10px; }
+  padding-top: 20px; }
   .cards ul {
     margin: 0;
     padding: 0;
@@ -545,23 +551,28 @@ footer {
     display: inline-block; }
 
 .up-scroll {
-  background-color: #fff;
   text-align: center;
   border-top: 1px solid #9c9c9c;
   border-bottom: 1px solid #9c9c9c;
-  margin-bottom: 12px;
+  padding-top: 10px;
+  padding-bottom: 12px;
   -webkit-box-shadow: 0 6px 6px 0 #B0B0B0;
-  box-shadow: 0 6px 6px 0 #B0B0B0; }
+  box-shadow: 0 6px 6px 0 #B0B0B0;
+  background-color: #c9c9c9; }
 
 #toTop {
-  font: 17px/43px MyriadPro, Arial, Geneva, Helvetica;
-  display: inline-block;
+  display: block;
   color: #000;
-  background: url(../images/arrow-to-up.png) no-repeat left center;
-  padding-left: 15px;
-  cursor: pointer; }
+  cursor: pointer;
+  background-color: #fff;
+  transition: .3s; }
+  #toTop span {
+    background: url(../images/arrow-to-up.png) no-repeat left center;
+    padding-left: 15px;
+    font: 17px/43px MyriadPro, Arial, Geneva, Helvetica;
+    display: inline-block; }
   #toTop:hover {
-    background-color: #fcfcfc;
+    background-color: #f2f2f2;
     text-decoration: none; }
 
 /*# sourceMappingURL=main.css.map */
